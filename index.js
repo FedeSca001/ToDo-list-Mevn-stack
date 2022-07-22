@@ -21,7 +21,6 @@ app.use("/todo", require("./src/routes/routesToDo"));
 const conectDB = async ()=>{
     try{
         const data = await mongoose.connect(process.env.MONGODB_URI);
-        console.log("conectado a base de datos ");
         return {data};
     } catch {
         err => console.log('no hay DB')
@@ -30,8 +29,7 @@ const conectDB = async ()=>{
 
 //INIT
 app.listen(
-        port, async ()=> {
-            await conectDB();
-            console.log('logued',port);
+    port, async ()=> {
+        await conectDB();
 }
 );

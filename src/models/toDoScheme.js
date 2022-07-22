@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const toDoScheme = mongoose.Schema({
-        name: {
+        title: {
             type: String,
+        },
+        ext: {
+            typw: String
         },
         priority:{
             type: Number
@@ -11,6 +14,9 @@ const toDoScheme = mongoose.Schema({
         },
         status: {
             type: Boolean
+        },
+        user: {
+            type: Object
         }
 });
 
