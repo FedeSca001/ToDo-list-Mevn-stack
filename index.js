@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
-const routeToDo = require('./src/routes/toDo')
 require("dotenv").config();
 
 
@@ -11,10 +10,11 @@ const port = process.env.PORT || 5050;
 
 //Middleware
 app.use(express.json());
-app.use(morgan("dev")), app.use(cors());
+app.use(morgan("dev")),
+app.use(cors());
 
 //Routes
-app.get('/todo',()=>{console.log("quetpasa");});
+app.use("/todo", require("./src/routes/routesToDo"));
 
 
 //Mongo DB
