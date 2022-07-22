@@ -1,0 +1,31 @@
+{
+  "name": "todo-app-mevn-stack",
+  "version": "1.0.0",
+  "description": "create to do list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FedeSca001/ToDo-list-Mevn-stack.git"
+  },
+  "keywords": [
+    "toDo"
+  ],
+  "author": "FedeSca001",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FedeSca001/ToDo-list-Mevn-stack/issues"
+  },
+  "homepage": "https://github.com/FedeSca001/ToDo-list-Mevn-stack#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
