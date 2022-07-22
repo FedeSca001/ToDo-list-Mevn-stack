@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
-
+const routeToDo = require('./src/routes/toDo')
 require("dotenv").config();
 
 
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(morgan("dev")), app.use(cors());
 
 //Routes
-app.get('/todo',require('./src/routes/toDo'));
+app.get('/todo',()=>{console.log("quetpasa");});
 
 
 //Mongo DB
