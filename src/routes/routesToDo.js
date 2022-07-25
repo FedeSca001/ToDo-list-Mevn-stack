@@ -30,7 +30,6 @@ router.post("/item", async (req, res) => {
     try {
         const data = await toDoScheme(req.body).save();
         const response = await res.send(data);
-        console.log('requ BODY'+ req.body);
         return response;
     } catch {
         (err) => console.log(err);
