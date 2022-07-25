@@ -3,16 +3,16 @@ POST http://localhost:5000/todo/item HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "otro objeto de tarea",
-    "text": "es una larga historia que en algún momento se aclarara",
-    "priority": 3,
+    "title": "segunda tarea",
+    "text": "es la segunda tarea pre front end",
+    "priority": 5,
     "date": "",
     "status": true
 }
 ###
 GET http://localhost:5000/todo HTTP/1.1
 ###
-GET http://localhost:5000/todo/get/el dia HTTP/1.1
+GET http://localhost:5000/todo/get/FedeSca001 HTTP/1.1
 ###
 PUT http://localhost:5000/todo/update/62dace714b59831eca3e7907 HTTP/1.1
 Content-Type: application/json

@@ -12,12 +12,12 @@ router.get('/',async (req,res)=>{
         err=> console.log(err);
     }
 })
-//Get for Name
 
+//Get for Name
 router.get('/get/:id', async (req,res)=>{
     try{
         const { id } = req.params
-        const data = await toDoScheme.find({title: id});
+        const data = await toDoScheme.find({user: id});
         const response = await res.send(data);
         return response;
     } catch {
