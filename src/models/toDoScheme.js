@@ -3,8 +3,8 @@ const toDoScheme = mongoose.Schema({
         title: {
             type: String,
         },
-        ext: {
-            typw: String
+        text: {
+            type: String
         },
         priority:{
             type: Number

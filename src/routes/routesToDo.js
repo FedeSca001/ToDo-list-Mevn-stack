@@ -27,9 +27,19 @@ router.get('/get/:id', async (req,res)=>{
 
 //Post new
 router.post("/item", async (req, res) => {
+    const { title, text, priority ,} = req.body;
+    const data = {
+            title: title,
+            text: text,
+            priority: Number(priority),
+            date: new Date(),
+            status: false,
+            user: 'FedeSca001'
+    };
     try {
-        const data = await toDoScheme(req.body).save();
-        const response = await res.send(data);
+        const dataSave = await toDoScheme(data).save();
+        const response = await res.send(dataSave);
+        console.log(data.text);
         return response;
     } catch {
         (err) => console.log(err);

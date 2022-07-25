@@ -15,6 +15,7 @@ app.use(cors());
 
 //Routes
 app.use("/todo", require("./src/routes/routesToDo"));
+app.use('/user', require("./src/routes/routesUser"));
 
 
 //Mongo DB
