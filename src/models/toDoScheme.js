@@ -9,9 +9,6 @@ const toDoScheme = mongoose.Schema({
         priority:{
             type: Number
         },
-        date: {
-            type: Date
-        },
         status: {
             type: Boolean
         },

@@ -32,9 +32,8 @@ router.post("/item", async (req, res) => {
             title: title,
             text: text,
             priority: Number(priority),
-            date: new Date(),
             status: false,
-            user: 'FedeSca001'
+            user: "FedeSca001",
     };
     try {
         const dataSave = await toDoScheme(data).save();
