@@ -14,10 +14,10 @@ router.get("/", async (req, res) => {
 });
 
 //Get for Name
-router.get("/:id", async (req, res) => {
+router.get("/:id/:pass", async (req, res) => {
         try {
-                const { id } = req.params;
-                const data = await userScheme.find({ name: id });
+                const { id, pass } = req.params;
+                const data = await userScheme.find({ name: id, password: pass });
                 const response = await res.send(data);
                 return response;
         } catch {
