@@ -3,7 +3,7 @@ const userScheme = require("../models/userScheme.js");
 
 const router = express.Router();
 //Get all
-router.get("/", async (req, res) => {
+/*router.get("/", async (req, res) => {
         try {
                 const data = await userScheme.find();
                 const response = await res.send(data);
@@ -11,15 +11,19 @@ router.get("/", async (req, res) => {
         } catch {
                 (err) => console.log(err);
         }
-});
+});*/
 
 //Get for Name
 router.get("/:id/:pass", async (req, res) => {
         try {
                 const { id, pass } = req.params;
-                const data = await userScheme.find({ name: id, password: pass });
-                const response = await res.send(data);
-                return response;
+                if (id && pass) {
+                        const data = await userScheme.find({ name: id, password: pass });
+                        const response = await res.send(data);
+                        return response;
+                } else{
+                        res.send(console.error(err))
+                }
         } catch {
                 (err) => console.log(err);
         }
@@ -58,5 +62,16 @@ router.put("/update/:id", async (req, res) => {
                 (err) => console.log(err);
         }
 });
+
+//Delete all
+router.delete('/delete', async(req,res)=>{
+    try{
+        const data = await userScheme.remove();
+        const resp = await res.send(data);
+        return resp;
+    }catch{
+        err=>console.log(err);
+    }
+})
 
 module.exports = router;
