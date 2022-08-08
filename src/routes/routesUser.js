@@ -22,7 +22,7 @@ router.get("/:id/:pass", async (req, res) => {
                         const response = await res.send(data);
                         return response;
                 } else{
-                        res.send(console.error(err))
+                        res.send('none')
                 }
         } catch {
                 (err) => console.log(err);
