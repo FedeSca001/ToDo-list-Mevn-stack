@@ -34,11 +34,7 @@ Content-Type: application/json
 {
     "name": "FedeSca001",
     "lastName": "perritoMalvado",
-    "password": "lcdtm1234"       
+    "password": "lcdtm1234"
 }
-###
-GET http://localhost:5000/user/ HTTP/1.1
-###
-GET http://localhost:5000/user/FedeSca001 HTTP/1.1
 ###
 GET http://localhost:5000/user/FedeSca001/lcdtm1234 HTTP/1.1
