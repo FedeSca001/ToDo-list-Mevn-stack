@@ -73,5 +73,16 @@ router.delete('/delete', async(req,res)=>{
         err=>console.log(err);
     }
 })
+//Delette for NAME
+router.delete('/delete/:id', async (req, res)=>{
+        try {
+                const { id } = req.params;
+                const data = await userScheme.remove({name: id});
+                const resp = await res.send(data);
+                return resp;
 
+        } catch (error) {
+                console.log(error);
+        }
+})
 module.exports = router;
