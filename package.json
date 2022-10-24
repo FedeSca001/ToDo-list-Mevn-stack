@@ -4,7 +4,8 @@
         "description": "create to do list",
         "main": "index.js",
         "scripts": {
-                "start": "node index.js",
+                "start": "./node_modules/.bin/netlify-lamda serve src",
+                "build": "./node_modules/.bin/netlify-lamda serve src",
                 "dev": "nodemon index.js"
         },
         "repository": {
