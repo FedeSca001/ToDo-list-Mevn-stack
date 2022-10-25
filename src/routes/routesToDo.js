@@ -21,7 +21,7 @@ router.get('/get/:id', async (req,res)=>{
         const response = await res.send(data);
         return response;
     } catch {
-        err=>console.log(err);
+        await res.send('error al cargar')
     }
 })
 
