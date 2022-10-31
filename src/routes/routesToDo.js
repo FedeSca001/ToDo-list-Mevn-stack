@@ -27,7 +27,7 @@ router.get('/get/:id', async (req,res)=>{
 
 //Post new
 router.post("/item", async (req, res) => {
-    const { title, text, priority ,} = req.body;
+    const { title, text, priority} = req.body;
     const data = {
             title: title,
             text: text,
