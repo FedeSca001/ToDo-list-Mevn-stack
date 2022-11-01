@@ -76,7 +76,7 @@ router.put("/update/:id", async (req, res) => {
                 { _id: id },
                 { $set: {title, text, priority, date, status}}
         );
-        const response = await res.send(update);
+        const response = res.send(update);
         return response;
     } catch {
         (err) => console.log(err);
