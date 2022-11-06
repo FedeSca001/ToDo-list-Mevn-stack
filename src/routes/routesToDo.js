@@ -9,7 +9,8 @@ router.get('/',async (req,res)=>{
         const response = await res.send(data);
         return response;
     } catch {
-        err=> console.log(err);
+        (err) => res.send(err);
+
     }
 })
 
@@ -41,7 +42,7 @@ router.post("/item", async (req, res) => {
         console.log(data.text);
         return response;
     } catch {
-        (err) => console.log(err);
+        (err) => res.send(err);
     }
 });
 
@@ -63,7 +64,8 @@ router.delete("/delete/:id", async (req, res) => {
                 const resp = await res.send(data);
                 return resp;
         } catch {
-                (err) => console.log(err);
+            (err) => res.send(err);
+
         }
 });
 
@@ -79,7 +81,7 @@ router.put("/update/:id", async (req, res) => {
         const response = res.send(update);
         return response;
     } catch {
-        (err) => console.log(err);
+        (err) => res.send(err);
     }
 });
 

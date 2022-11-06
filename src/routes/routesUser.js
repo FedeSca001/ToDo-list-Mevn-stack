@@ -25,7 +25,7 @@ router.get("/:id/:pass", async (req, res) => {
                         res.send('none')
                 }
         } catch {
-                (err) => console.log(err);
+                (err) => res.send(err);
         }
 });
 
