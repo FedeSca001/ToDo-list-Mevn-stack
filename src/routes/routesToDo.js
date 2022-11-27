@@ -45,18 +45,7 @@ router.post("/item", async (req, res) => {
         (err) => res.send(err);
     }
 });
-/*
-router.delete("/delete/:id", async (req, res) => {
-        try {
-                const {id} = req.params;
-                const data = await toDoScheme.remove({_id: id});
-                const resp = await res.send(data);
-                return resp;
-        } catch {
-            (err) => res.send(err);
 
-        }
-});*/
 //Delete all
 router.delete('/delete', async(req,res)=>{
     try{
