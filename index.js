@@ -30,6 +30,7 @@ const conectDB = async ()=>{
 //INIT
 app.listen(
     port, async ()=> {
+        console.log('conecticuud');
         await conectDB();
 }
 );
